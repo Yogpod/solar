@@ -1,4 +1,4 @@
-## Solar Setup Tracker
+## ArrayForge
 
 This is a tool to sketch and sanity‑check a small/off‑grid solar system. You add panels, group them into arrays, assign arrays to MPPT charge controllers, define batteries and an inverter, and it gives you quick numbers: expected daily production, battery energy, autonomy, energy balance, rough recharge time, and a set of warnings if something looks off (like panel Voc too close to a controller's limit or a battery current limit being exceeded).
 
