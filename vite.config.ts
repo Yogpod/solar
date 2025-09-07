@@ -1,11 +1,9 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
-// GitHub Pages deployment: base must match repository name.
-// If you fork under another repo (e.g. myfork/solar-tracker), change to that folder name.
-const repoName = 'solar';
-
+// Use relative base so the app works both locally and when served from a sub-path (GitHub Pages).
+// GitHub Pages will host at https://<user>.github.io/<repo>/ so relative asset URLs resolve correctly.
 export default defineConfig({
   plugins: [react()],
-  base: `/${repoName}/`,
+  base: './',
 });
