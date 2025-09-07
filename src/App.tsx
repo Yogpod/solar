@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useState } from 'react';
+import logo from '../arrayforge.png'; // processed by Vite asset pipeline
 import {
   AnyComponent,
   Battery,
@@ -667,7 +668,17 @@ export const App: React.FC = () => {
 
   return (
     <div className="max-w-5xl mx-auto p-6">
-      <h1 className="text-4xl font-bold text-center mb-8">Solar Setup Tracker</h1>
+      <div className="flex flex-col items-center mb-8">
+        <div className="flex items-center gap-4">
+          {/* Logo only */}
+          <img
+            src={logo}
+            alt="arrayforge"
+            className="w-24 h-24 object-contain drop-shadow-sm"
+            onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none'; }}
+          />
+        </div>
+      </div>
 
       {/* Export / Import */}
       <div className="mb-8 p-4 bg-gray-100 rounded flex flex-wrap gap-4 justify-center">
